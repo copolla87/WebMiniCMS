@@ -27,7 +27,7 @@ class Articles extends Controller
         require 'application/views/_templates/footer.php';
         if(isset($_POST["submit_add_article"])) {
             $articles_model = $this->loadModel('ArticlesModel');
-            $articles_model->addArticle($_POST["title"], $_POST["photo"], $_POST["article"]);
+            $articles_model->addArticle($_POST["title"],  $_POST["article"], $_POST["photo"]);
         }
         
         //where to go after article is added
