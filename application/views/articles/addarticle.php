@@ -1,3 +1,5 @@
+<?php $this->load->view('topMenu'); ?>
+
 <div class="container">
     <h2>You are in the View: application/views/song/addarticle.php (everything in this box comes from that file)</h2>
     <!-- add song form -->
@@ -13,3 +15,5 @@
         </form>
     </div>
 </div>
+
+<?php $this->load->view('bottom'); ?>
