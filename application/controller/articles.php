@@ -4,12 +4,11 @@ class Articles extends Controller
 {
     
     public function index() {
-        echo 'This is the articles indes, we gonna show all articles like a blog';
         $articles_model = $this->loadModel('ArticlesModel');
         $articles = $articles_model->getAllArticles();
-        require 'application/views/_templates/header.php';
+        require 'application/views/_templates/topMenu.php';
         require 'application/views/articles/index.php';
-        require 'application/views/_templates/footer.php';
+        require 'application/views/_templates/bottom.php';
         
         
 

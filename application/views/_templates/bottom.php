@@ -1,7 +1,8 @@
 
 	
 <!-- Site footer -->
-    <div class="bottom">
+
+    <div class="footer navbar-fixed-bottom">
         <div class="container">
             <div class="col-md-4">
                 <h3><span class="glyphicon glyphicon-heart"></span> Footer section 1</h3>
@@ -17,6 +18,7 @@
             </div>
         </div>
     </div>
+
         <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
