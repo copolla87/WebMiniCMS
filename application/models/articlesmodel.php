@@ -20,16 +20,23 @@ class ArticlesModel
         return $query->fetchAll();
     }
     
-    public function addArticle($title, $article)
+    public function addArticle($title, $article, $photo)
     {
         $title = strip_tags($title);
-        //$photo = strip_tags($photo); //Photo strip tags or another procedure???
+        $photo = strip_tags($photo); //Photo strip tags or another procedure???
+        
+        $filename = $_FILES['photo']['name'];
+        $tempname = $_FILES['photo']['tmp_name'];
+        $fp = fopen($tempname, 'r');
+        $imgContent = fread($fp, filesize($tempname));
+        fclose($fp);
+
         $article = strip_tags($article);
 
-        $sql = "INSERT INTO articles (title, article) VALUES (:title, :article)";
+        $sql = "INSERT INTO articles (title, article, photo) VALUES (:title, :article, :photo)";
         $query = $this->db->prepare($sql);
         
-        $query->execute(array(':title' => $title, ':article' => $article));
+        $query->execute(array(':title' => $title, ':article' => $article, 'photo' => $imgContent));
     }
     
     public function deleteArticle($article_id)

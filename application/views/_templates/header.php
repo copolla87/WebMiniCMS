@@ -6,6 +6,8 @@
     <title>PHP MVC skeleton</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome for social media icons-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet" />
     <!-- css -->
     <link href="<?php echo URL; ?>public/css/style.css" rel="stylesheet">
     <!-- jQuery -->

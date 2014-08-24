@@ -8,7 +8,9 @@
     <meta name="author" content="">
     <link rel="icon" href="../favicon.ico">
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>PAO beach volley team</title>
+        <!-- Font awesome for social media icons-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet" />
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo URL; ?>public/css/bootstrap.min.css" rel="stylesheet">
@@ -70,7 +72,6 @@
       </div>
       <br/>
       <br/>
-      <p>asdfwegewgw</p>
       <div class="container"><script type="text/javascript" src="bottom.js"></script></div>
     </div>
 
