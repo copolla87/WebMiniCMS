@@ -8,6 +8,8 @@ class Home extends Controller
      */
     public function index() 
     {
+        $articles_model = $this->loadModel('ArticlesModel');
+        $articles = $articles_model->getLastThree();
         require 'application/views/_templates/topMenu.php';
         require 'application/views/home/index.php';
         require 'application/views/_templates/bottom.php';
@@ -29,5 +31,13 @@ class Home extends Controller
         /*
          * require 'application/views/.....
          */
+    }
+
+    public function gallery()
+    {
+        require 'application/views/_templates/topMenu.php';
+        require 'application/views/home/imageGallery.php';
+        require 'application/views/_templates/bottom.php';
+
     }
 }

@@ -45,5 +45,11 @@ class ArticlesModel
         $query->$this->db->prepare($sql);
         $query->execute(array(':article_id' => $article_id));
     }
+
+    public function getLastThree(){
+        $sql = "SELECT * FROM articles ORDER BY id DESC LIMIT 3";
+        $query = $this->db->prepare($sql);
+        return $query->fetchAll();
+    }
 }
 

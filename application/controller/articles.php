@@ -9,9 +9,6 @@ class Articles extends Controller
         require 'application/views/_templates/topMenu.php';
         require 'application/views/articles/index.php';
         require 'application/views/_templates/bottom.php';
-        
-        
-
     }
     
     /*
