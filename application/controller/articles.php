@@ -20,14 +20,13 @@ class Articles extends Controller
      * This is not an actuall page, its an ACTION.
      */
     public function addArticle() {
-        echo 'Message from controller: you are in the controller: Articles, using the method addArticle()';
         if(isset($_POST["submit_add_article"])) {
             $articles_model = $this->loadModel('ArticlesModel');
             $articles_model->addArticle($_POST["title"],  $_POST["article"], $_POST["photo"]);
         }
-        require 'application/views/_templates/header.php';
+        require  'application/views/_templates/topMenuAdmin.php';
         require 'application/views/articles/addarticle.php';
-        require 'application/views/_templates/footer.php';
+        require 'application/views/_templates/footerAdmin.php';
         
         //where to go after article is added
        // header('location: ' . URL . 'articles/index');
