@@ -39,7 +39,7 @@ class Articles extends Controller
         
         if(isset($_POST["submit_add_article"])) {
             $articles_model = $this->loadModel('ArticlesModel');
-            $articles_model->deleteArticle($$article_id);
+            $articles_model->deleteArticle($article_id);
         }
         
         //where to go after article is deleted
@@ -50,4 +50,13 @@ class Articles extends Controller
     /*
      * We may add showArticle which will be a view for showing a particullar article
      */
+    
+    public function addImage(){
+        if(isset($POST["submit_image"])){
+            $images_model = $this->loadModel('ImagesModel');
+            $images_model->addImage($_POST["title"], $_POST["image"]);
+        }
+        require 'application/views/_templates/topMenuAdmin.php';
+        require 'application/views/articles/addimage.php';
+    }
 }

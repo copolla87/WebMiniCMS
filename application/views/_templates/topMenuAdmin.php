@@ -50,8 +50,8 @@
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Articles</a></li>
-                <li><a href="#about">Images</a></li>
+                <li class="active"><a href="../articles/addArticle">Articles</a></li>
+                <li><a href="../articles/addImage">Images</a></li>
                 <li><a href="#contact">Team</a></li>
               </ul>
             </div>

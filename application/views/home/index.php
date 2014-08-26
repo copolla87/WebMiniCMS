@@ -5,7 +5,7 @@
       <img src="http://placehold.it/1200x480" alt="" />
       <div class="carousel-caption">
         <p>Caption text here</p>
-      </div>
+      </div>          
     </div>
     <div class="item">
       <img src="http://placehold.it/1200x480" alt="" />
