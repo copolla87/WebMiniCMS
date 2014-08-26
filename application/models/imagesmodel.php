@@ -23,11 +23,8 @@ class ImagesModel
 
     public function addImage($title, $image)
     {
-        $target = $_SERVER['DOCUMENT_ROOT'] . "\PhpProject1\public\images";
+        $target = $_SERVER['DOCUMENT_ROOT'] . "\PhpProject1\public\images\ ";
         $target = $target . basename($_FILES['image']['name']);
-        if(!file_exists($target)){
-            mkdir("public\images");
-        }
     	//$title = strip_tags($title);
     	//$image = strip_tags($image);
     	$sql = "INSERT INTO images (title, image) VALUES (:title, :image)";

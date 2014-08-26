@@ -52,7 +52,7 @@ class Articles extends Controller
      */
     
     public function addImage(){
-        if(isset($POST["submit_image"])){
+        if(isset($_POST["submit_image"])){
             $images_model = $this->loadModel('ImagesModel');
             $images_model->addImage($_POST["title"], $_POST["image"]);
         }
