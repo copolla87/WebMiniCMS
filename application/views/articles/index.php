@@ -15,19 +15,15 @@
             <p>Caption One</p>
           </div>
         </div>
+        <?php foreach ($articles as $article) { ?>
         <div class="item">
-          <img src="http://placehold.it/1200x480" alt="" />
+          <img src=" <?php echo $article->$photo; ?> " alt="" />
           <div class="carousel-caption">
-            <p>CaptionTwo</p>
+            <p><?php echo $article->$title;?> </p>
           </div>
         </div>
-        <div class="item">
-          <img src="http://placehold.it/1200x480" alt="" />
-          <div class="carousel-caption">
-            <p>Caption Three</p>
-          </div>
-        </div>
-      </div>
+        <?php } ?>
+        <?php echo $articles; ?>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->

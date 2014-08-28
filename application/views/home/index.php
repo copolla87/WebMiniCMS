@@ -7,24 +7,45 @@
         <p>Caption text here</p>
       </div>          
     </div>
+
+    <?php foreach ($articles as $article) { ?>
     <div class="item">
-      <img src="http://placehold.it/1200x480" alt="" />
+
+      <img src="<?php
+        /*
+        $img_src = $article->photo;
+        $imgbinary = fread(fopen($img_src, "r"), filesize($img_src));
+        $img_str = base64_encode($imgbinary);
+        echo '<img src="data:image/jpeg;base64,'.$img_str.'" />';
+        */
+
+        /*
+        $data = $article->photo;
+        $data = base64_decode($data);
+        $im = imagecreatefromstring($data);
+        header('Content-Type: image/jpg');
+        echo imagejpeg($im);
+        */
+        $data = $article->photo;
+        echo base64_decode($data); 
+
+
+
+       /*
+        header("Content-type: image/jpeg");
+        $data = $article->photo;
+        $data = pack('H*',$data); 
+        $im = imagecreatefromstring($data);
+        echo imagejpeg($im);
+        */
+       
+        //echo $article->photo 
+       ?>"/>
       <div class="carousel-caption">
-        <p>Caption text here</p>
+        <p><?php echo $article->title;?></p>
       </div>
     </div>
-    <div class="item">
-      <img src="http://placehold.it/1200x480" alt="" />
-      <div class="carousel-caption">
-        <p>Caption text here</p>
-      </div>
-    </div>
-    <div class="item">
-      <img src="http://placehold.it/1200x480" alt="" />
-      <div class="carousel-caption">
-        <p>Caption text here</p>
-      </div>
-    </div>
+    <?php } ?>
   </div><!-- /.carousel-inner -->
   <!--  Next and Previous controls below
         href values must reference the id for this carousel -->

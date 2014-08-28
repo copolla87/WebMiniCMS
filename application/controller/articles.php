@@ -6,7 +6,7 @@ class Articles extends Controller
     public function index() {
         $articles_model = $this->loadModel('ArticlesModel');
         $articles = $articles_model->getAllArticles();
-        require 'application/views/_templates/topMenu.php';
+        require 'application/views/_templates/topMenuAdmin.php';
         require 'application/views/articles/index.php';
         require 'application/views/_templates/bottom.php';
     }
@@ -58,5 +58,14 @@ class Articles extends Controller
         }
         require 'application/views/_templates/topMenuAdmin.php';
         require 'application/views/articles/addimage.php';
+    }
+
+    public function login(){
+
+        if(isset($_POST["login"])) {
+            $users_model = $this->loadModel('UsersModel');
+            $users_model->verification($_POST["username"], $_POST["password"]);
+        }
+        require 'application/views/articles/login.php';
     }
 }
