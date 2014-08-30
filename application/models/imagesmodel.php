@@ -23,14 +23,14 @@ class ImagesModel
 
     public function addImage($title, $image)
     {
-        $target = $_SERVER['DOCUMENT_ROOT'] . "\PhpProject1\public\images\ ";
+        $target = $_SERVER['DOCUMENT_ROOT'] . "/PhpProject1/public/images/ ";
         $target = $target . basename($_FILES['image']['name']);
     	//$title = strip_tags($title);
     	//$image = strip_tags($image);
-    	$sql = "INSERT INTO images (title, image) VALUES (:title, :image)";
+    	$sql = "INSERT INTO images (title, image) VALUES (:title, :target)";
         $query = $this->db->prepare($sql);
         
-        $query->execute(array(':title' => $title, ':image' => $image));
+        $query->execute(array(':title' => $title, ':target' => URL.substr($target, 28)));
 
         if(move_uploaded_file($_FILES['image']['tmp_name'], $target)){
             echo "saved";

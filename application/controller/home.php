@@ -10,6 +10,7 @@ class Home extends Controller
     {
         $articles_model = $this->loadModel('ArticlesModel');
         $articles = $articles_model->getAllArticles();
+        
         require 'application/views/_templates/topMenu.php';
         require 'application/views/home/index.php';
         require 'application/views/_templates/bottom.php';
@@ -35,6 +36,8 @@ class Home extends Controller
 
     public function gallery()
     {
+        $images_model = $this->loadModel('ImagesModel');
+        $images = $images_model->getAllImages();
         require 'application/views/_templates/topMenu.php';
         require 'application/views/home/imageGallery.php';
         require 'application/views/_templates/bottom.php';

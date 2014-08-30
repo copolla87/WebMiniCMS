@@ -11,6 +11,7 @@
     <?php foreach ($articles as $article) { ?>
     <div class="item">
 
+      
       <img src="<?php
         /*
         $img_src = $article->photo;
@@ -26,10 +27,8 @@
         header('Content-Type: image/jpg');
         echo imagejpeg($im);
         */
-        $data = $article->photo;
-        echo base64_decode($data); 
-
-
+        header('Content-Type: image/jpg');
+        echo base64_decode($article->photo);
 
        /*
         header("Content-type: image/jpeg");

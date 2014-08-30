@@ -23,7 +23,7 @@ class ArticlesModel
     public function addArticle($title, $article, $photo)
     {
         $title = strip_tags($title);
-        $photo = strip_tags($photo); //Photo strip tags or another procedure???
+        //$photo = strip_tags($photo); //Photo strip tags or another procedure???
         
         $filename = $_FILES['photo']['name'];
         $tempname = $_FILES['photo']['tmp_name'];
