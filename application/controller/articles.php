@@ -8,7 +8,7 @@ class Articles extends Controller
         $articles = $articles_model->getAllArticles();
         require 'application/views/_templates/topMenuAdmin.php';
         require 'application/views/articles/index.php';
-        require 'application/views/_templates/bottom.php';
+        require 'application/views/_templates/footerAdmin.php';
     }
     
     /*
@@ -53,9 +53,12 @@ class Articles extends Controller
     
     public function addImage(){
         if(isset($_POST["submit_image"])){
+            
             $images_model = $this->loadModel('ImagesModel');
             $images_model->addImage($_POST["title"], $_POST["image"]);
-        }
+            
+        } 
+
         require 'application/views/_templates/topMenuAdmin.php';
         require 'application/views/articles/addimage.php';
     }
@@ -67,5 +70,17 @@ class Articles extends Controller
             $users_model->verification($_POST["username"], $_POST["password"]);
         }
         require 'application/views/articles/login.php';
+    }
+
+    public function deleteImages(){
+        $images_model = $this->loadModel("ImagesModel");
+        $images = $images_model->getAllImages();
+
+        require 'application/views/_templates/topMenuAdmin.php';
+        require 'application/views/articles/deleteImage.php';
+
+        if(isset($_POST["delete_image"])){
+            $images_model->deleteImage($_POST['id']);
+        }
     }
 }

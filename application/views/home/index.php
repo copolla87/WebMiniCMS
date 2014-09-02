@@ -27,9 +27,7 @@
         header('Content-Type: image/jpg');
         echo imagejpeg($im);
         */
-        header('Content-Type: image/jpg');
-        echo base64_decode($article->photo);
-
+        echo $article->photo
        /*
         header("Content-type: image/jpeg");
         $data = $article->photo;
