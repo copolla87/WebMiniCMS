@@ -5717,7 +5717,8 @@ button.close {
 }
 .carousel-inner {
   position: relative;
-  width: 100%;
+  width: 1200px;
+  height: 480px;
   overflow: hidden;
 }
 .carousel-inner > .item {
