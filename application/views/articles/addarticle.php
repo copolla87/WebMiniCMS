@@ -10,7 +10,7 @@
             <label>Article</label><br>
             <textarea rows="4" cols="50" name="article" value="" required ></textarea><br>
             <label>Upload Image</label>
-            <input type="file" name="photo" id="file"><br>
+            <input type="file" name="photo" id="photo"><br>
             <button type="submit" class="btn btn-primary" name="submit_add_article">Save changes</button>
             <button type="reset" class="btn btn-default">Cancel</button>
             </div>

@@ -43,4 +43,31 @@ class Home extends Controller
         require 'application/views/_templates/bottom.php';
 
     }
+
+    public function contact()
+    {
+        require 'application/views/_templates/topMenu.php';
+        require 'application/views/home/contact.php';
+        require 'application/views/_templates/bottom.php';
+        if(isset($_POST["sent_mail"])) {
+            /* Set e-mail recipient */
+            $myemail = "copolla87@gmail.com";/* Check all form inputs using check_input function */
+    
+            /* Check all form inputs using check_input function */
+            $name =$_POST['inputName'];
+            $email = $_POST['inputEmail'];
+            $subject = $_POST['inputSubject'];
+            $message = $_POST['inputMessage'];
+
+            /* If e-mail is not valid show error message */
+            /*
+            if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
+            {
+                show_error("Invalid e-mail address");
+            }
+            */
+            mail($myemail, $email,$subject, $message);
+        }
+    }
+
 }
