@@ -10,7 +10,7 @@
             
                <div class="col-lg-3 col-md-4 col-xs-6 thumb">
                 <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="<?php echo $image->image ?>" alt="">
+                    <img class="img-responsive" src="<?php echo $image->image ?>" alt="" style="height:300px; width:400px">
                 </a>
             </div>
             <?php } ?>
