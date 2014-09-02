@@ -33,6 +33,11 @@
                 <h3><span></span> Contuct us</h3>
                 <p>Tel: 555-21345</p>
                 <p>Address: Alexandras Avenue,<br> Stadium Apostolos Nikolaidis</p>
+                <div class="btn-group">
+                <a href="home/contact" class="btn btn-primary">
+                    Or just mail as 
+                </a>
+            </div>
             </div>
         </div>
     </div>
